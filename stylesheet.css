@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+}
+.container__search {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px;
+}
+.container__search--search-bar {
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 18px;
+}
+.container__search--btn {
+    background-color: #f69d3c;
+    border-radius: 18px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+.container__search--btn:hover {
+    box-shadow: inset 60px 0 0 0 #ffffff;
+    transition: ease-out 0.4s;
+}
+.container__search--btn:active {
+    transform: scale(0.95);
+    transition: 0s;
+}
+.container__search--btn__glass {
+    width: 30px;
+}
+.container__weather__city {
+    font-size: 40px;
+}
+.container__weather__temp {
+    font-size: 60px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 25px;
+}
+.container__weather__humidity {
+    font-size: 25px;
+    padding-top: 5px
+}
+.container__weather__wind {
+    font-size: 25px;
+    padding-top: 5px
+}
+.icon {
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 30px
+}
+.weather.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+  }
+  
+  .weather.loading:after {
+    visibility: visible;
+    content: "Loading...";
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 20px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .container__search {
+        gap: 3vw;
+        padding: 0px;
+    }
+    .container__search--search-bar {
+        font-size: 10vw;
+        padding: 3vw;
+        max-width: 55vw;
+    };
+    .container {
+        padding: 3vh;
+    };
+}
